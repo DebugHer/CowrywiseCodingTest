@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+
+    <Button android:layout_width="wrap_content"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:textColor="@color/green"
+            android:layout_height="wrap_content" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/button"/>
+
+    <ImageView
+            android:src="@drawable/ic_menu_black_24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/button"/>
+
+
+
+    <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.487">
+
+        <TextView android:layout_width="match_parent"
+                  android:text="@string/currency_ncalculator"
+                  android:textSize="40sp"
+                  android:textStyle="bold"
+                  android:textColor="@color/blue"
+                  android:layout_marginBottom="25dp"
+                  android:layout_height="wrap_content"/>
+
+
+        <EditText android:layout_width="match_parent"
+                  android:hint="EUR"
+                  android:id="@+id/currency1"
+                  android:layout_height="wrap_content"
+                  android:singleLine="true"
+                  android:background="@drawable/border"
+                  android:layout_marginBottom="15dp"/>
+
+        <EditText
+                android:singleLine="true"
+                android:enabled="false"
+                android:id="@+id/currency2"
+                android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="15dp"
+                  android:background="@drawable/border"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <include layout="@layout/spinner_layout_2"/>
+
+            <ImageView android:layout_width="40dp"
+                       android:src="@drawable/ic_compare_arrows_black_24dp"
+                       android:layout_height="50dp"
+                       android:id="@+id/imageView"
+                       android:layout_marginTop="8dp"
+                       app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintStart_toEndOf="@id/selectCurrency1" android:layout_marginStart="8dp"
+                       app:layout_constraintEnd_toStartOf="@id/selectCurrency2" android:layout_marginEnd="8dp"
+            />
+
+            <include layout="@layout/spinner_layout"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+
+                android:id="@+id/convertbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundbtn"
+                android:text="Convert"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+        />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

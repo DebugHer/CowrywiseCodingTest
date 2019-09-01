@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CowrywiseCodingTest</string>
+    <string name="currency_calculator">Currency\nCalculator</string>
+    <string name="currency_ncalculator">Currency Calculator<font color="#33FF75">.</font></string>
+</resources>
